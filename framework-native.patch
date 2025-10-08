@@ -1,0 +1,27 @@
+From a88a0a4ce5feab14cbbbe3f0484fc1cc931207ad Mon Sep 17 00:00:00 2001
+From: Ori Ben Zur <oribz01@gmail.com>
+Date: Tue, 23 Sep 2025 11:55:37 +0000
+Subject: [PATCH] Add bio-tracer modifications to frameworks/native
+
+Change-Id: Ia5c5497c0121d763940d787e1314da0683ab9c7e
+---
+ libs/cputimeinstate/cputimeinstate.cpp | 3 ++-
+ 1 file changed, 2 insertions(+), 1 deletion(-)
+
+diff --git a/libs/cputimeinstate/cputimeinstate.cpp b/libs/cputimeinstate/cputimeinstate.cpp
+index 4a7bd36202..2f84d69ae4 100644
+--- a/libs/cputimeinstate/cputimeinstate.cpp
++++ b/libs/cputimeinstate/cputimeinstate.cpp
+@@ -262,7 +262,8 @@ bool startTrackingUidTimes() {
+ 
+     gTracking = attachTracepointProgram("sched", "sched_switch") &&
+             attachTracepointProgram("power", "cpu_frequency") &&
+-            attachTracepointProgram("sched", "sched_process_free");
++            attachTracepointProgram("sched", "sched_process_free") &&
++            attachTracepointProgram("block", "block_rq_issue");
+     return gTracking;
+ }
+ 
+-- 
+2.34.1
+
