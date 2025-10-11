@@ -31,7 +31,7 @@ git -C $ANDROID_SRC/system/bpfprogs apply $PATCH_REPO/patches/system_bpfprogs.pa
 ```
 
 ### 3. Build Android
-Build Android with the applided patches. For example:
+Build Android with the applied patches. For example:
 ```bash
 cd $ANDROID_SRC
 source build/envsetup.sh
