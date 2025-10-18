@@ -1,6 +1,6 @@
 [submodule "frameworks/native"]
 	path = frameworks/native
-	url = https://github.com/OriBenZur/android_frameworks_native-bio-tracer
+	url = https://github.com/acsl-technion/android_frameworks_native-bio-tracer
 [submodule "system/bpfprogs"]
 	path = system/bpfprogs
-	url = https://github.com/OriBenZur/android_system_bpfprogs-bio-tracer
+	url = https://github.com/acsl-technion/android_system_bpfprogs-bio-tracer.git
